@@ -10,6 +10,9 @@ public class PlayerHandler : MonoBehaviour {
 
     Transform playerTransform;
 
+    [SerializeField]
+    AudioSource moveSound;
+
     float moveX;
     float moveY;
     Vector2 moveVector;
@@ -33,7 +36,6 @@ public class PlayerHandler : MonoBehaviour {
             Debug.Log("This shouldn't be happening.");
         }
     }
-
 
     // Start is called before the first frame update
     void Start() {
@@ -65,6 +67,20 @@ public class PlayerHandler : MonoBehaviour {
     }
 
     IEnumerator SmoothMove(Vector2 movement, float time) {
+
+        if(movement == new Vector2(1,0)) {
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+        } else if(movement == new Vector2(-1,0)) {
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, 180);
+        } else if (movement == new Vector2(0, 1)) {
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, 90);
+        } else if (movement == new Vector2(0, -1)) {
+            gameObject.transform.rotation = Quaternion.Euler(0, 0, 270);
+        }
+
+        moveSound.volume = PlayerPrefs.GetFloat("audioVolume");
+        moveSound.Play();
+
         Vector2 startingPos = playerTransform.position;
         Vector2 finalPos = startingPos + movement;
         float elapsedTime = 0;
@@ -76,6 +92,7 @@ public class PlayerHandler : MonoBehaviour {
         }
 
         movedToNewspot.Invoke();
+        yield return new WaitForSeconds(0.025f);
         isMoving = false;
     }
 

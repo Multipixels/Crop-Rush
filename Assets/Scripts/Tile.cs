@@ -39,8 +39,11 @@ public class Tile : MonoBehaviour {
         return tileId;
     }
     public void Progress() {
-        if(tileId == 2) {
+        if(tileId == 2 || tileId == 6 || tileId == 7) {
             tileId = 4;
+        }
+        if (tileId == 5 || tileId == 8) {
+            tileId = 2;
         }
         Initialize(tileId);
     }

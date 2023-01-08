@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.116780184, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -102,24 +102,44 @@ MonoBehaviour:
     name: Empty
     description: Doesn't spawn a tile
     sprite: {fileID: 0}
-    color: {r: 0, g: 0.12316942, b: 1, a: 1}
+    color: {r: 1, g: 1, b: 1, a: 1}
   - id: 1
     name: Wall
     description: Unwalkable.
-    sprite: {fileID: 0}
+    sprite: {fileID: -746353403, guid: 4fec08235cf33954d9eb562efe70ecdb, type: 3}
     color: {r: 0, g: 0, b: 0, a: 1}
   - id: 2
     name: Wheat
     description: Single pass.
-    sprite: {fileID: 0}
+    sprite: {fileID: 620839769, guid: 0379923458108364bb87072d6cc16167, type: 3}
     color: {r: 1, g: 0.76711166, b: 0, a: 1}
   - id: 3
     name: Dirt
     description: Passed  tile.
-    sprite: {fileID: 0}
+    sprite: {fileID: -858127647, guid: 0379923458108364bb87072d6cc16167, type: 3}
     color: {r: 0.3584906, g: 0.13787384, b: 0, a: 1}
   - id: 4
     name: Player Start (Dirt)
     description: Where the player starts.
-    sprite: {fileID: 0}
+    sprite: {fileID: -858127647, guid: 0379923458108364bb87072d6cc16167, type: 3}
     color: {r: 0.3584906, g: 0.13787384, b: 0, a: 1}
+  - id: 5
+    name: Thick Wheat
+    description: Double pass.
+    sprite: {fileID: 2096123690, guid: 0379923458108364bb87072d6cc16167, type: 3}
+    color: {r: 0.93412864, g: 1, b: 0, a: 1}
+  - id: 6
+    name: Dirty Key
+    description: Single Pass + Key
+    sprite: {fileID: 21300000, guid: c6aafe40baabd684d9da2566e150fde9, type: 3}
+    color: {r: 0.69662046, g: 0, b: 1, a: 1}
+  - id: 7
+    name: Dirty Gate
+    description: Single Pass + Requires Key
+    sprite: {fileID: 21300000, guid: 8910110ed1188a346aa4cfc4462f9262, type: 3}
+    color: {r: 0, g: 0.74509805, b: 1, a: 1}
+  - id: 8
+    name: Really Dirty Gate
+    description: Double Pass + Requires Key
+    sprite: {fileID: 21300000, guid: a6d51c704182bd444aaba7daaa9fae47, type: 3}
+    color: {r: 0, g: 0.2004807, b: 1, a: 1}
