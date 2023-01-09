@@ -112,6 +112,8 @@ Project Link: [https://github.com/Multipixels/Crop-Rush](https://github.com/Mult
 
 Itch.io Page: [https://multipixels.itch.io/crop-rush](https://multipixels.itch.io/crop-rush)
 
+Ludum Page: [https://ldjam.com/events/ludum-dare/52/crop-rush](https://ldjam.com/events/ludum-dare/52/crop-rush)
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
