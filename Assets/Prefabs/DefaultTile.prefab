@@ -106,27 +106,27 @@ MonoBehaviour:
   - id: 1
     name: Wall
     description: Unwalkable.
-    sprite: {fileID: -746353403, guid: 4fec08235cf33954d9eb562efe70ecdb, type: 3}
+    sprite: {fileID: 21300000, guid: d4754738d30ab834eb90906d4e907114, type: 3}
     color: {r: 0, g: 0, b: 0, a: 1}
   - id: 2
     name: Wheat
     description: Single pass.
-    sprite: {fileID: 620839769, guid: 0379923458108364bb87072d6cc16167, type: 3}
+    sprite: {fileID: 21300000, guid: 2863ec0a64a756f4c9f9c05a46d9ae82, type: 3}
     color: {r: 1, g: 0.76711166, b: 0, a: 1}
   - id: 3
     name: Dirt
     description: Passed  tile.
-    sprite: {fileID: -858127647, guid: 0379923458108364bb87072d6cc16167, type: 3}
+    sprite: {fileID: 21300000, guid: 5bdd64a3d9f858544b015a044fdc4afa, type: 3}
     color: {r: 0.3584906, g: 0.13787384, b: 0, a: 1}
   - id: 4
     name: Player Start (Dirt)
     description: Where the player starts.
-    sprite: {fileID: -858127647, guid: 0379923458108364bb87072d6cc16167, type: 3}
+    sprite: {fileID: 21300000, guid: 5bdd64a3d9f858544b015a044fdc4afa, type: 3}
     color: {r: 0.3584906, g: 0.13787384, b: 0, a: 1}
   - id: 5
     name: Thick Wheat
     description: Double pass.
-    sprite: {fileID: 2096123690, guid: 0379923458108364bb87072d6cc16167, type: 3}
+    sprite: {fileID: 21300000, guid: 24ad228c2b1bcb243894d26ee69db1ed, type: 3}
     color: {r: 0.93412864, g: 1, b: 0, a: 1}
   - id: 6
     name: Dirty Key
