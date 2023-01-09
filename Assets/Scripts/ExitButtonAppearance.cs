@@ -5,10 +5,9 @@ using UnityEngine;
 public class ExitButtonAppearance : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Awake()
-    {
+    void Awake() {
         #if UNITY_WEBGL
-        gameObject.SetActive(false);
+            gameObject.SetActive(false);
         #endif
 
     }
