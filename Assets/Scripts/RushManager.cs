@@ -216,7 +216,7 @@ public class RushManager : MonoBehaviour {
 
     private void Win() {
 
-        if (level == 2) {
+        if (level == 9) {
             gameActive = false;
             Time.timeScale = 0;
             winMenu.SetActive(true);
