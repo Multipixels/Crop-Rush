@@ -12,33 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 04e5e167fa344d848a5b567d29b3c083
-  - enabled: 1
-    path: Assets/Scenes/Level2.unity
-    guid: cc7eea519a2977048a0b9a76f05d950a
-  - enabled: 1
-    path: Assets/Scenes/Level3.unity
-    guid: 916e58464ebc3c840a9ca1ad0764d141
-  - enabled: 1
-    path: Assets/Scenes/Level4.unity
-    guid: 105faa213a1520646bd33cc8f34a8ca4
-  - enabled: 1
-    path: Assets/Scenes/Level5.unity
-    guid: f29c32d12f0a40645b17ede14bb56a27
-  - enabled: 1
-    path: Assets/Scenes/Level6.unity
-    guid: 240cfa74633690b4ca67c842ddbbaecd
-  - enabled: 1
-    path: Assets/Scenes/Level7.unity
-    guid: ffd2f049ac1fbed409cd0a62daf85f9f
-  - enabled: 1
-    path: Assets/Scenes/Level8.unity
-    guid: 3ec71b6b71dc74e42a33d42fd5f7855d
-  - enabled: 1
-    path: Assets/Scenes/Level9.unity
-    guid: 32203da3ee6ebf74ba2b2d9fe30bb066
-  - enabled: 1
     path: Assets/Scenes/LevelSelector.unity
     guid: ef00afa21c7b8ba429e1c6ae6fe5c0c2
+  - enabled: 1
+    path: Assets/Scenes/LevelRush.unity
+    guid: c995c5693b4ef5846b1075fc5d413f75
   m_configObjects: {}

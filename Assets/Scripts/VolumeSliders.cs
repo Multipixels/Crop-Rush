@@ -6,13 +6,15 @@ using UnityEngine.UI;
 public class VolumeSliders : MonoBehaviour
 {
 
-    public void Awake() {
+    public void Start() {
         gameObject.GetComponent<Slider>().value = PlayerPrefs.GetFloat("audioVolume");
     }
 
     public void ChangeVolume(float value) {
-        SoundManager test = GameObject.Find("MusicManager").GetComponent<SoundManager>();
+        try {
+            SoundManager test = GameObject.Find("MusicManager").GetComponent<SoundManager>();
 
-        test.ChangeVolume(value);
+            test.ChangeVolume(value);
+        } catch {; }
     }
 }

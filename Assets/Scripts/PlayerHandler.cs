@@ -25,6 +25,9 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField]
     private MapManager mm;
 
+    [SerializeField]
+    private RushManager rm;
+
     public void Move(InputAction.CallbackContext context) {
         float moveVal = context.ReadValue<float>();
 
@@ -49,8 +52,14 @@ public class PlayerHandler : MonoBehaviour {
             if (moveY != 0) {
                 moveVector = new Vector2(0, moveY);
 
-                if (mm.PreMove(moveVector + (Vector2)playerTransform.position) == false) {
-                    moveVector = new Vector2(moveX, 0);
+                try {
+                    if (mm.PreMove(moveVector + (Vector2)playerTransform.position) == false) {
+                        moveVector = new Vector2(moveX, 0);
+                    }
+                } catch {
+                    if (rm.PreMove(moveVector + (Vector2)playerTransform.position) == false) {
+                        moveVector = new Vector2(moveX, 0);
+                    }
                 }
 
 
@@ -59,9 +68,16 @@ public class PlayerHandler : MonoBehaviour {
             }
 
 
-            if (moveVector != Vector2.zero && mm.PreMove(moveVector + (Vector2)playerTransform.position) == true) {
-                isMoving = true;
-                StartCoroutine(SmoothMove(moveVector, 0.1f));
+            try {
+                if (moveVector != Vector2.zero && mm.PreMove(moveVector + (Vector2)playerTransform.position) == true) {
+                    isMoving = true;
+                    StartCoroutine(SmoothMove(moveVector, 0.1f));
+                }
+            } catch {
+                if (moveVector != Vector2.zero && rm.PreMove(moveVector + (Vector2)playerTransform.position) == true) {
+                    isMoving = true;
+                    StartCoroutine(SmoothMove(moveVector, 0.1f));
+                }
             }
         }
     }

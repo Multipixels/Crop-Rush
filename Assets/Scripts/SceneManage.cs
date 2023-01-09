@@ -5,9 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class SceneManage : MonoBehaviour {
 
+    public void LoadLevelRush() {
+        try {
+            SceneManager.LoadScene("LevelRush");
+        } catch {
+            ;
+        }
+    }
+
     public void ReloadLevel() {
         try {
-            SceneManager.LoadScene("Level");
+            if (PlayerPrefs.GetInt("currentLevel") == -1) {
+                SceneManager.LoadScene("LevelRush");
+            } else {
+                SceneManager.LoadScene("Level");
+            }
         } catch {
             ;
         }
