@@ -197,11 +197,17 @@ public class MapManager : MonoBehaviour {
     private TMP_Text movesCounter;
     [SerializeField]
     private TMP_Text timeCounter;
+    [SerializeField]
+    private TMP_Text keyCounterText;
+    [SerializeField]
+    private TMP_Text levelText;
 
     [SerializeField]
     private GameObject pauseMenu;
     [SerializeField]
     private GameObject winMenu;
+    [SerializeField]
+    private GameObject keyMenu;
 
     private int totalKeys;
 
@@ -215,13 +221,14 @@ public class MapManager : MonoBehaviour {
     }
     public void StartGame(int lvl) {
         level = lvl;
+        levelText.text = $"Level: {level+1}";
         GenerateField();
         gameActive = true;
         timeTaken = 0f;
 
         cropsCounter.text = $"Crops Left: {tilesLeft} / {totalTiles}";
         movesCounter.text = "Moves Taken: 0";
-        timeCounter.text = "Time: 00:00:00";
+        //timeCounter.text = "Time: 00:00:00";
 
         totalKeys = 0;
         Time.timeScale = 1;
@@ -230,7 +237,7 @@ public class MapManager : MonoBehaviour {
     private void Update() {
         if (gameActive == true) {
             timeTaken += Time.deltaTime;
-            timeCounter.text = $"Time: {TimeSpan.FromSeconds(timeTaken).ToString("mm':'ss'.'ff")}";
+            //timeCounter.text = $"Time: {TimeSpan.FromSeconds(timeTaken).ToString("mm':'ss'.'ff")}";
         }
     }
 
@@ -337,6 +344,8 @@ public class MapManager : MonoBehaviour {
         } else if (mapTiles[y, x].GetId() == 6) {
             tilesLeft -= 1;
             totalKeys += 1;
+            keyMenu.SetActive(true);
+            keyCounterText.text = $"{totalKeys}";
 
             keyAudio.volume = PlayerPrefs.GetFloat("audioVolume");
             keyAudio.Play();
@@ -344,6 +353,7 @@ public class MapManager : MonoBehaviour {
         } else if (mapTiles[y, x].GetId() == 7 || mapTiles[y, x].GetId() == 8) {
             tilesLeft -= 1;
             totalKeys -= 1;
+            keyCounterText.text = $"{totalKeys}";
 
             useKeyAudio.volume = PlayerPrefs.GetFloat("audioVolume");
             useKeyAudio.Play();
@@ -364,9 +374,9 @@ public class MapManager : MonoBehaviour {
         winMenu.SetActive(true);
 
         winMenu.transform.Find("WinMoves").GetComponent<TMP_Text>().text = $"Moves Taken: {totalMoves}";
-        winMenu.transform.Find("WinTime").GetComponent<TMP_Text>().text = timeCounter.text;
+        //winMenu.transform.Find("WinTime").GetComponent<TMP_Text>().text = timeCounter.text;
 
-        timeCounter.gameObject.transform.parent.gameObject.SetActive(false);
+        //timeCounter.gameObject.transform.parent.gameObject.SetActive(false);
         movesCounter.gameObject.transform.parent.gameObject.SetActive(false);
         cropsCounter.gameObject.transform.parent.gameObject.SetActive(false);
 

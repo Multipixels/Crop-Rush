@@ -42,6 +42,8 @@ public class RushManager : MonoBehaviour {
     private TMP_Text movesCounter;
     [SerializeField]
     private TMP_Text timeCounter;
+    [SerializeField]
+    private TMP_Text keyCounterText;
 
     [SerializeField]
     private GameObject pauseMenu;
@@ -193,6 +195,7 @@ public class RushManager : MonoBehaviour {
         } else if (mapTiles[y, x].GetId() == 6) {
             tilesLeft -= 1;
             totalKeys += 1;
+            keyCounterText.text = $"{totalKeys}";
 
             keyAudio.volume = PlayerPrefs.GetFloat("audioVolume");
             keyAudio.Play();
@@ -200,6 +203,7 @@ public class RushManager : MonoBehaviour {
         } else if (mapTiles[y, x].GetId() == 7 || mapTiles[y, x].GetId() == 8) {
             tilesLeft -= 1;
             totalKeys -= 1;
+            keyCounterText.text = $"{totalKeys}";
 
             useKeyAudio.volume = PlayerPrefs.GetFloat("audioVolume");
             useKeyAudio.Play();

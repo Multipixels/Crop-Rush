@@ -108,7 +108,7 @@ public class PlayerHandler : MonoBehaviour {
         }
 
         movedToNewspot.Invoke();
-        yield return new WaitForSeconds(0.025f);
+        yield return new WaitForSeconds(0.03f);
         isMoving = false;
     }
 
