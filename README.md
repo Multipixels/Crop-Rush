@@ -49,18 +49,33 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!--[![Product Name Screen Shot][product-screenshot]](https://example.com)-->
+**GAME**
 
-A game made for the [Ludum Dare 52](https://ldjam.com/events/ludum-dare/52) game jam.
+A game made for the [Ludum Dare 52](https://ldjam.com/events/ludum-dare/52/crop-rush) game jam.
 
-Crop Rush is a short puzzle game in which the player has to harvest all the crops in the least amount of moves possible. The game is inspired by Club Penguin's [Thin Ice](https://clubpenguin.fandom.com/wiki/Thin_Ice) minigame.
+Crop Rush is a short puzzle game in which the player has to harvest all the crops in the **least amount of moves possible**. The game is inspired by Club Penguin's [Thin Ice](https://clubpenguin.fandom.com/wiki/Thin_Ice) minigame.
 
-It was made over the span of three days, with the main theme of the game jam being "Harvest".
+There are 10 total levels, as well as a "Level Rush" mode that's unlocked when the 10th level is finished.  
+Try and get as many 3*s as possible!
+
+---
+
+**CONTROLS**
+
+Only mouse and keyboard is supported.
+Volume can be adjusted in the main menu and pause menu.
+
+Movement: WASD / Arrow Keys  
+Pause Menu: ESC / R
+
+---
+
+**SCREENSHOTS**
 
 <div align="center">
-<img src="https://img.itch.zone/aW1hZ2UvMTg2ODI2My8xMDk4MTY5My5wbmc=/original/mRWEOz.png" alt="Logo" width="480" height="270">
-<img src="https://img.itch.zone/aW1hZ2UvMTg2ODI2My8xMDk4MTY5NC5wbmc=/original/m6ZXlD.png" alt="Logo" width="480" height="270">
-<img src="https://img.itch.zone/aW1hZ2UvMTg2ODI2My8xMDk4MTY5NS5wbmc=/original/DKrSw%2B.png" alt="Logo" width="480" height="270">
+<img src="Assets/HumbleScreenShot1.png" alt="Screenshot1" width="480" height="270">
+<img src="Assets/HumbleScreenShot2.png"" alt="Screenshot2" width="480" height="270">
+<img src="Assets/HumbleScreenShot3.png" alt="Screenshot3" width="480" height="270">
 </div>
 
 
